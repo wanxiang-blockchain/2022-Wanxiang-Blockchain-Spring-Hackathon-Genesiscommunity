@@ -1,0 +1,190 @@
+.AudioControl {
+  display: flex;
+  padding: 60px 0 20px;
+  .audioImage {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 174, 163, 0.1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: none;
+  }
+  .controlBox {
+    // margin-left: 40px;
+    margin-left: 20px;
+    padding-top: 10px;
+    flex: auto;
+    .titleBox {
+      display: flex;
+      align-items: center;
+      .title {
+        font-size: 16px;
+        color: rgba(37, 43, 58, 1);
+      }
+      .user {
+        font-size: 14px;
+        color: rgba(37, 43, 58, 0.7);
+        margin-left: 12px;
+      }
+    }
+    .infoBox {
+      margin-top: 27px;
+      display: flex;
+      align-items: center;
+      > div {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-left: 40px;
+        &:first-child {
+          margin-left: 0;
+        }
+        .title {
+          color: rgba(37, 43, 58, 0.7);
+        }
+        .value {
+          color: rgba(37, 43, 58, 0.45);
+        }
+        .pointer {
+          cursor: pointer;
+        }
+      }
+    }
+    .actionBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+      .actionLeft {
+        display: flex;
+        align-items: center;
+        color: rgba(37, 43, 58, 0.7);
+        .left {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+        }
+        .playAndStop {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+        }
+        .right {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+        }
+        .volume {
+          cursor: pointer;
+          margin-left: 36px;
+        }
+        .download {
+          cursor: pointer;
+          margin-left: 32px;
+        }
+      }
+      .actionRight {
+        font-size: 14px;
+        color: rgba(37, 43, 58, 0.45);
+      }
+    }
+    .progress {
+      position: relative;
+      &.ant-slider {
+        &:hover,
+        &:active {
+          .ant-slider-handle {
+            width: 10px;
+            height: 10px;
+            margin-top: -4px;
+          }
+        }
+        .ant-slider-rail {
+          height: 1px;
+          background: rgba(165, 167, 173, 0.2);
+        }
+        .ant-slider-track {
+          height: 1px;
+          background: rgba(38, 181, 173, 1);
+          border-radius: 1px;
+        }
+        .ant-slider-handle {
+          width: 4px;
+          height: 4px;
+          border: none;
+          background: rgba(0, 184, 196, 1);
+          margin-top: -1px;
+        }
+      }
+    }
+  }
+}
+
+.audioVolumeProgressVertical {
+  &.ant-slider {
+    &.ant-slider-vertical {
+      width: auto;
+      margin: 0;
+      padding: 0 2px;
+    }
+    &:hover,
+    &:active {
+      .ant-slider-handle {
+        width: 8px;
+        height: 8px;
+        margin-left: -4px;
+      }
+    }
+    .ant-slider-rail {
+      width: 1px;
+      background: rgba(66, 71, 80, 1);
+    }
+    .ant-slider-track {
+      width: 1px;
+      background: linear-gradient(90deg, #006567 0%, #00e8ff 100%);
+      border-radius: 1px;
+    }
+    .ant-slider-handle {
+      width: 4px;
+      height: 4px;
+      border: none;
+      background: rgba(0, 184, 196, 1);
+      margin-left: -2px;
+    }
+    .ant-slider-mark {
+      display: none;
+    }
+  }
+}
+.audioVolumePopover {
+  &.ant-popover {
+    .ant-popover-arrow {
+      .ant-popover-arrow-content {
+        background: white;
+      }
+    }
+    .ant-popover-inner {
+      background: white;
+      .ant-popover-inner-content {
+        padding: 7px;
+      }
+    }
+  }
+}
+.audioValumeProgress {
+  height: 52px;
+}
